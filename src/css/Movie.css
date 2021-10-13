@@ -1,0 +1,21 @@
+.movies {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 2px;
+}
+
+.movie {
+  background-color: var(--main--bg--color);
+  display: flex;
+  flex-direction: column;
+}
+
+.movie__data {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 30px;
+  gap: 10px;
+}
