@@ -2,7 +2,6 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-auto-rows: 1fr;
   gap: 2px;
 }
 
@@ -12,10 +11,35 @@
   flex-direction: column;
 }
 
+.movie:hover {
+  cursor: pointer;
+  background-color: var(--sub--bg--color);
+  color: var(--main--bg--color);
+}
+
 .movie__data {
   display: flex;
   flex-direction: column;
-  text-align: justify;
+  text-align: center;
   padding: 30px;
-  gap: 10px;
+  gap: 20px;
+}
+
+.movie__summary {
+  text-align: justify;
+}
+
+.movie__genres {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.genres__genre {
+  border: 1px var(--sub--bg--color) solid;
+  padding: 5px 10px;
+  border-radius: 25px;
+  font-size: 14px;
 }
