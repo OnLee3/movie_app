@@ -2,6 +2,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-auto-rows: 100vh;
   gap: 2px;
 }
 
@@ -9,12 +10,19 @@
   background-color: var(--main--bg--color);
   display: flex;
   flex-direction: column;
+  transition: all 0.1s linear;
 }
 
 .movie:hover {
   cursor: pointer;
   background-color: var(--sub--bg--color);
   color: var(--main--bg--color);
+  font-style: italic;
+}
+
+.movie img {
+  height: 66vh;
+  object-fit: cover;
 }
 
 .movie__data {
@@ -27,6 +35,7 @@
 
 .movie__summary {
   text-align: justify;
+  line-height: 1.2;
 }
 
 .movie__genres {

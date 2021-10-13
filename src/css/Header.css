@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background-color: inherit;
+  top: 0;
+  color: var(--sub--bg--color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  padding: 50px 50px;
+}
+
+.header__title {
+  background-color: inherit;
+  border: 1px var(--sub--bg--color) solid;
+  border-radius: 50%;
+  transition: all 0.1s linear;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.header__title:hover {
+  cursor: pointer;
+  background-color: var(--sub--bg--color);
+  border-color: var(--main--bg--color);
+  color: var(--main--bg--color);
+}
