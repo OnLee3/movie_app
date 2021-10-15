@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Movie from "../components/Movie";
-import "./Home.css"
+import "../css/Home.css"
 
 class Home extends React.Component{
   state = {
@@ -9,7 +9,7 @@ class Home extends React.Component{
     movies : []
   }
 
-  getMovies= async() => {
+  getMovies = async() => {
     const { data : { data : { movies }}} = await axios.get("https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by=download_count")
     this.setState({ movies, isLoading: false})
   }
@@ -20,16 +20,25 @@ class Home extends React.Component{
 
   render(){
     const { isLoading, movies } = this.state;
-    return <section className="container">
-      {isLoading ? <div className="loader">
-        <span className="loader__text">Loading...</span>
-      </div> 
-      : <div>
+    return <section className="container">{
+        isLoading 
+      ? 
+        <div className="loader"> 
+            <span className="loader__text">Loading...</span>
+        </div> 
+      : 
         <div className="movies">
-         {movies.map(movie => (<Movie key = {movie.id} id={movie.id} year={movie.year} title={movie.title} summary={movie.summary} poster={movie.large_cover_image} genres={movie.genres} background={movie.background_image} />
+         {movies.map(movie => (
+         <Movie key = {movie.id} 
+            id={movie.id} 
+            year={movie.year} 
+            title={movie.title} 
+            summary={movie.summary} 
+            poster={movie.large_cover_image} 
+            genres={movie.genres} 
+            background={movie.background_image} />
       ))}
         </div>
-      </div>
   }
       </section>
   }

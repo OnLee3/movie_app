@@ -28,14 +28,21 @@
 .movie img {
   height: 60vh;
   object-fit: cover;
+  object-position: center center;
 }
 
 .movie__data {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   padding: 30px;
   gap: 20px;
+}
+
+.movie__title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .movie__summary {
@@ -49,7 +56,6 @@
   justify-content: center;
   gap: 5px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
 }
 
 .genres__genre {
