@@ -7,8 +7,6 @@
 
 body {
   width: 100%;
-  /* background: linear-gradient(#ee7752, #300917, #07445a, #23d5ab); */
-  /* background-color: var(--sub--bg--color); */
   animation: gradient 15s ease infinite;
   color: var(--sub--bg--color);
   font-family: "Playfair Display", serif;

@@ -13,8 +13,7 @@ class Detail extends React.Component{
         const { state } = location;
         if (state){
             return (
-            <div className="detail">
-                <img className="detail__background" src={state.background} alt={state.title}/>
+            <div className="detail__background" style={{backgroundImage: `url(${state.background})`}}>
                 <div className="detail__grid">
                     <img className="detail__poster" src={state.poster} alt={state.title}/>
                     <div className="detail__description">
